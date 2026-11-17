@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surgmotion"
+version = "0.1.0"
+description = "SurgMotion: A Video-Native Foundation Model for Universal Understanding of Surgical Videos."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "numpy",
+    "timm",
+    "einops",
+]
+
+[project.urls]
+Homepage = "https://github.com/CAIR-HKISI/SurgMotion"
+
+[tool.setuptools.packages.find]
+include = ["surgmotion*"]
+exclude = ["surgmotion.datasets*"]

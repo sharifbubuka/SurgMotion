@@ -32,8 +32,8 @@ import torch
 import torch.nn as nn
 from typing import Optional, Dict, Any, Callable
 from pathlib import Path
-from src.masks.utils import apply_masks
-from src.models.utils.pos_embs import get_1d_sincos_pos_embed
+from surgmotion.masks.utils import apply_masks
+from surgmotion.models.utils.pos_embs import get_1d_sincos_pos_embed
 from evals.foundation_phase_probing.modelcustom.adapters.base_adapter import BaseFoundationModelAdapter
 
 logging.basicConfig()

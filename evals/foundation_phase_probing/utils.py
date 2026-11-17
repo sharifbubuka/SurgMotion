@@ -7,9 +7,9 @@ import numpy as np
 import torch
 import torchvision.transforms as transforms
 
-import src.datasets.utils.video.transforms as video_transforms
-import src.datasets.utils.video.volume_transforms as volume_transforms
-from src.datasets.utils.video.randerase import RandomErasing
+import surgmotion.datasets.utils.video.transforms as video_transforms
+import surgmotion.datasets.utils.video.volume_transforms as volume_transforms
+from surgmotion.datasets.utils.video.randerase import RandomErasing
 
 
 def make_transforms(

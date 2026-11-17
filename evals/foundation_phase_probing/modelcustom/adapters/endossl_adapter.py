@@ -67,7 +67,7 @@ class EndoSSLAdapter(BaseFoundationModelAdapter):
             # EndoSSL typically uses ViT-Large architecture
             # Prefer local ViT implementation (consistent with other parts of project)
             try:
-                from src.models.vision_transformer import vit_large
+                from surgmotion.models.vision_transformer import vit_large
                 model = vit_large(
                     patch_size=16,
                     img_size=resolution,

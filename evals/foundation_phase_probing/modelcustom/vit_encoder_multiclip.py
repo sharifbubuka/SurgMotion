@@ -29,9 +29,9 @@ import logging
 import torch
 import torch.nn as nn
 
-import src.models.vision_transformer as vit
-from src.masks.utils import apply_masks
-from src.models.utils.pos_embs import get_1d_sincos_pos_embed
+import surgmotion.models.vision_transformer as vit
+from surgmotion.masks.utils import apply_masks
+from surgmotion.models.utils.pos_embs import get_1d_sincos_pos_embed
 
 logging.basicConfig()
 logger = logging.getLogger()

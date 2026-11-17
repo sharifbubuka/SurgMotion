@@ -51,7 +51,7 @@ SurgMotion achieves **SOTA on all** representative surgical tasks (workflow, act
 
 ```
 SurgMotion/
-├── src/                        # V-JEPA2 core: ViT, VideoMAE, datasets, masks
+├── surgmotion/                 # V-JEPA2 core: ViT, VideoMAE, datasets, masks
 ├── evals/                      # Evaluation entry points & foundation phase probing
 │   ├── main.py                 # Single-task entry: python -m evals.main --fname <yaml>
 │   └── foundation_phase_probing/
@@ -79,7 +79,7 @@ SurgMotion/
 ├── scripts/                    # Batch probing & environment setup shells
 ├── foundation_models/          # Third-party model implementations (git submodules)
 ├── data/                       # Data directory
-├── setup.py                    # pip install -e .
+├── pyproject.toml              # pip install -e . (backbone only)
 └── requirements.txt            # All dependencies (excluding EndoMamba)
 ```
 
@@ -94,6 +94,7 @@ conda activate SurgMotion
 # Install PyTorch matching your CUDA version first:
 # https://pytorch.org/get-started/locally/
 
+pip install -r requirements.txt
 pip install -e .
 ```
 
@@ -111,7 +112,7 @@ conda activate endomamba                 # Use only for EndoMamba configs
 | File | Scope |
 |------|-------|
 | `requirements.txt` | All dependencies (V-JEPA2 core + foundation probing) |
-| `setup.py` | `pip install -e .` reads `requirements.txt` automatically |
+| `pyproject.toml` | Installs the `surgmotion` package (models, masks, utils, hub) with minimal deps |
 
 > EndoMamba has its own isolated environment managed by `scripts/srun_endomamba_complie.sh`.
 

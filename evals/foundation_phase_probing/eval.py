@@ -17,11 +17,11 @@ from collections import Counter
 from evals.foundation_phase_probing.models import init_module
 from evals.foundation_phase_probing.utils import make_transforms
 from evals.utils.bootstrap import bootstrap_per_video_metrics, print_bootstrap_results
-from src.datasets.data_manager import init_data
-from src.models.attentive_pooler import AttentiveClassifier, AttentiveRegressor
-from src.utils.checkpoint_loader import robust_checkpoint_loader
-from src.utils.distributed import AllReduce, init_distributed
-from src.utils.logging import AverageMeter
+from surgmotion.datasets.data_manager import init_data
+from surgmotion.models.attentive_pooler import AttentiveClassifier, AttentiveRegressor
+from surgmotion.utils.checkpoint_loader import robust_checkpoint_loader
+from surgmotion.utils.distributed import AllReduce, init_distributed
+from surgmotion.utils.logging import AverageMeter
 
 import torch.distributed as dist
 
